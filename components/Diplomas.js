@@ -5,7 +5,7 @@ import HashTag from "../components/svg/HashTag";
 import Location from "../components/svg/Location";
 import Share from "../components/svg/Share";
 
-export default function Diplomas(props){
+function Diplomas(props){
     const diplomas = props.data
     return(
         <article className="w-3/5 m-auto">
@@ -47,5 +47,6 @@ export default function Diplomas(props){
             })}
         </article>
     )
-
 }
+
+export default Diplomas
