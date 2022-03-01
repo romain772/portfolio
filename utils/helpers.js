@@ -41,7 +41,4 @@ export function useWindowSize() {
   return windowSize;
 }
 
-export function validateInput(data){
-  console.log(data)
-}
-
+export const errorClassname = "my-2 error text-amber-600"
