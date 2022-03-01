@@ -36,7 +36,7 @@ export default function Home(props){
                 <div className="m-auto">
                     <Link href="https://www.linkedin.com/in/romain-breuil">
                         <a target="blank" >
-                            <LinkedIn/>
+                            <LinkedIn color="fill-cyan-600" hoverColor="hover:fill-orange-600"/>
                         </a>
                     </Link>
                 </div>
