@@ -1,5 +1,5 @@
 export default function (req, res) {
-  //  const data = {'message' : "envoyé"}
+//     const data = {'message' : "envoyé"}
   //   let nodemailer = require('nodemailer')
   //   const transporter = nodemailer.createTransport({
   //   host: 'mail.gmx.com',
