@@ -11,17 +11,17 @@ export default function Header(){
         {id : "5" , linkname : 'contact' , content : 'Contact'}
     ]
     const classNames = {
-        activeLink :"px-6 py-4 font-medium text-center text-2xl text-red-700 bg-white",
-        basicLink : "duration-150 ease-in px-6 py-4 font-medium text-center text-2xl text-white hover:text-red-700 hover:bg-white"
+        activeLink :"px-6 py-4 font-medium text-center text-2xl text-cyan-800 bg-white",
+        basicLink : "duration-150 ease-in px-6 py-4 font-medium text-center text-2xl text-white hover:text-cyan-800 hover:bg-white"
     }
     function background(link){
         switch(link){
-            case '/home' : return "bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500";
+            case '/home' : return "bg-gradient-to-r from-cyan-800 to-gray-900";
             break
-            case '/contact' : return "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400";
+            case '/contact' : return "bg-gradient-to-r from-gray-900 to-cyan-800";
             break
         }        
-        return "bg-gradient-to-r from-red-500 via-yellow-500 to-red-500"      
+        return "bg-gradient-to-r from-gray-900 via-cyan-800 to-gray-900"      
     }
     const router = useRouter()
     return(
