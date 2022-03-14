@@ -87,7 +87,7 @@ export default function Contact(){
                             </li>    
                             <li className="flex items-end my-8">
                                 <h3 className="text-xl">- Par Email : </h3>
-                                <a href="mailto:romain.breuil@gmx.com" className="ml-6 transition-150 text-gray-600 hover:text-red-600 hover:text-xl" >
+                                <a href="mailto:romain.breuil@gmx.com" className="ml-6 duration-200 text-gray-600 hover:scale-[1.1] hover:text-orange-600" >
                                     romain.breuil@gmx.com
                                 </a>
                             </li>     
@@ -114,7 +114,7 @@ export default function Contact(){
                                 {errors.email&&<p className={errorClassname}>{errors.email.message}</p>}
                             </div>
                             <div className="my-10 flex justify-around">
-                                <button className="bg-orange-500 hover:bg-transparent hover:border-orange-600 text-ml border-2 hover:shadow-lg duration-200 text-white hover:text-orange-600 py-2 px-3 rounded-lg" type="submit">
+                                <button className="bg-green-600 hover:bg-transparent hover:border-green-600 text-ml border-2 hover:shadow-lg duration-200 text-white hover:text-green-600 py-2 px-3 rounded-lg" type="submit">
                                     Envoyer
                                 </button>
                             </div>

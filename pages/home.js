@@ -13,7 +13,7 @@ export default function Home(props){
         <section className="p-10 min-h-[90vh]">
             <div className="text-center flex flex-col w-full ">
                 <div className="border-4 my-10 border-red-500 rounded-full w-40 h-40 m-auto" onContextMenu={abort} >
-                    <Image src="/pic.jpg" width="200" height="200" className="rounded-full"/>
+                    <Image src="/pic.jpg" width="200" height="200" className="rounded-full" alt="profile-pic"/>
                 </div>
                 <div>
                     <span className="text-gray-500 font-bold text-xl">{upCase(identity.firstname)+' '}</span>

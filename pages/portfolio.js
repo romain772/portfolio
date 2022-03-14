@@ -1,5 +1,6 @@
 import Title from '../components/Title'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Portfolio(props){
     const portfolio = props.portfolio
@@ -16,7 +17,7 @@ export default function Portfolio(props){
                                 <Link href={item.link} key={item.id}  >
                                     <a target="_blank" className={`w-[400px] h-[400px] m-4 flex flex-col justify-between shadow-xl hover:scale-[1.05] duration-150`}>
                                         <div className="relative">
-                                            <img src={item.image} className="w-full h-[270px] duration-150"/>
+                                            <img src={item.image} className="w-full h-[270px] duration-150" alt={item.name}/>
                                         </div>
                                         <div className="px-2 py-3 absolute">
                                             {item.tags.map((tag)=>{

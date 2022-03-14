@@ -29,7 +29,7 @@ function Display(props){
                                         <div className="w-fit m-auto">
                                         <Link href={point.link}>
                                             <a target="_blank">
-                                                <img onContextMenu={abort} src={point.image} className="my-10 bg-gray-200 shadow-md hover:scale-110 hover:bg-orange-100 hover:shadow-xl duration-200 p-5" width="200" height="200"/>
+                                                <img onContextMenu={abort} src={point.image} className="my-10 bg-gray-200 shadow-md hover:scale-110 hover:bg-orange-100 hover:shadow-xl duration-200 p-5" width="200" height="200" alt={point.link}/>
                                             </a>
                                         </Link>
                                         </div>
