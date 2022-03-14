@@ -13,7 +13,7 @@ module.exports = {
     ]
   },
   env: {
-    ROOT_URL: 'http://localhost:3000',
+    ROOT_URL: 'https://portfoliorb.herokuapp.com',
     MAIL_USERNAME : 'romain.breuil@gmx.com',
     MAIL_PASSWORD : 'Parissg772*'
   },
