@@ -47,9 +47,10 @@ export default function MobileHeader(){
                         links.map((link) => {
                             return (
                             <Link     
-                                key={link.id}                               
+                                key={link.id}          
+                                href={`/${link.linkname}`}                     
                                 >
-                                    <a key={link.id}  href={`/${link.linkname}`}>
+                                    <a>
                                         <li className={linkIsActive(router.pathname,`/${link.linkname}`)
                                         ? classNames.activeLink
                                         : classNames.basicLink }>{link.content.toUpperCase()}</li>
