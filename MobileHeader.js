@@ -49,7 +49,7 @@ export default function MobileHeader(){
                             <Link     
                                 key={link.id}                               
                                 >
-                                    <a href={`/${link.linkname}`}>
+                                    <a key={link.id}  href={`/${link.linkname}`}>
                                         <li className={linkIsActive(router.pathname,`/${link.linkname}`)
                                         ? classNames.activeLink
                                         : classNames.basicLink }>{link.content.toUpperCase()}</li>
