@@ -3,11 +3,13 @@ import HashTag from "../components/svg/HashTag";
 import Location from "../components/svg/Location";
 import Computer from "../components/svg/Computer";
 import Truck from "./svg/Truck";
+import { useWindowSize } from "../utils/helpers"
 
 export default function Experiences(props){
+    const size = useWindowSize()
     const experiences = props.data    
     return(
-        <article className="w-3/5 m-auto pb-5">
+        <article className={size.width>800?"w-3/5 m-auto":"w-4/5 m-auto"}>
             <h1 className="p-3 text-xl font-bold text-gray-500 flex justify-center items-center border-y-2 border-y-stone-500">
                 <Computer/>
                 PARCOURS

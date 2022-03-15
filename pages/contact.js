@@ -8,8 +8,10 @@ import {errorClassname} from '../utils/helpers'
 import Title from '../components/Title'
 import LinkedIn from "../components/svg/Linkedin";
 import Link from 'next/link'
+import { useWindowSize } from '../utils/helpers'
 
 export default function Contact(){
+    const size = useWindowSize()
     const [submitted, setSubmitted] = useState(false)
     function submitForm(data,e){
         e.preventDefault()
@@ -72,12 +74,13 @@ export default function Contact(){
         <>
             <ToastContainer/>
             <Title title="Contact"></Title>
-            <section className="p-10 min-h-[90vh] w-[80%] m-auto">
+            <section className={size.width>800?"p-10 min-h-[90vh] w-[80%] m-auto":"p-10 min-h-[90vh] w-[95%] m-auto"}>
                 <h1 className="text-2xl text-center pb-6 underline">Contactez moi : </h1>
-                <div className="grid grid-cols-2">
+                <div 
+                    className={size.width>800?"grid grid-cols-2":"flex flex-col"}>
                     <div>
                         <ul className="pt-8">
-                            <li className="flex items-end my-8">
+                            <li className="flex flex-wrap items-end my-8">
                                 <h3 className="text-xl">- Sur LinkedIn : </h3>
                                 <Link href="https://www.linkedin.com/in/romain-breuil">
                                     <a target="blank" className="ml-6" >
@@ -85,13 +88,13 @@ export default function Contact(){
                                     </a>
                                 </Link>
                             </li>    
-                            <li className="flex items-end my-8">
+                            <li className="flex flex-wrap items-end my-8">
                                 <h3 className="text-xl">- Par Email : </h3>
                                 <a href="mailto:romain.breuil@gmx.com" className="ml-6 duration-200 text-gray-600 hover:scale-[1.1] hover:text-orange-600" >
                                     romain.breuil@gmx.com
                                 </a>
                             </li>     
-                            <li className="flex items-end my-8">
+                            <li className="flex flex-wrap items-end my-8">
                             <h3 className="text-xl">- A l aide du formulaire de contact</h3>
                             </li>                               
                         </ul>

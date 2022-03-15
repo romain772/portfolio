@@ -4,11 +4,12 @@ import Error from 'next/error'
 import Title from '../../components/Title'
 import {abort} from '../../utils/helpers'
 import Link from 'next/link'
-import Image from 'next/image'
+import { useWindowSize } from '../../utils/helpers'
 
 const authorizedSkillsRoutes = ['javascript','php','css']
 
 function Display(props){
+    const size = useWindowSize()
     const router = useRouter()
     const id = router.query.id
     const data = props.skills.data
@@ -16,9 +17,9 @@ function Display(props){
         return(
             <>
             <Title title={data.title} />
-            <section className="p-10 min-h-[90vh] flex w-[80%] m-auto">
+            <section className={size.width>800?"p-10 min-h-[90vh] flex w-[80%] m-auto":"p-10 min-h-[90vh] flex flex-col w-[80%] m-auto"}>
                 <SkillsAside/>
-                <div className="w-4/5 py-4 px-14">
+                <div className={size.width>800?"w-4/5 py-4 px-14":"m-auto"}>
                     <h1 className="text-2xl font-bold text-center pb-10 underline">{data.title}</h1>
                     <div>
                         <div className="leading-loose text-lg text-center">{data.globalDescription}

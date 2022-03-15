@@ -1,14 +1,16 @@
 import SkillsAside from '../components/SkillsAside'
 import Title from '../components/Title'
+import { useWindowSize } from '../utils/helpers'
+
 
 export default function Skills(){   
+    const size = useWindowSize()
     return(
         <>
             <Title title="Compétences"/>
-            <section className="p-10 min-h-[90vh] flex w-[80%] m-auto">
-                <SkillsAside/>
-                <div className="w-4/5 py-4 px-14 text-lg">
-                <   h1 className="text-2xl text-center pb-6 underline">Compétences Générales</h1>
+            <section className={size.width>800?"p-10 min-h-[90vh] flex w-[80%] m-auto":"p-10 min-h-[90vh] flex flex-col w-[80%] m-auto"}>                <SkillsAside/>
+                <div className={size.width>800?"w-4/5 py-4 px-14":"m-auto"}>
+                    <h1 className="text-2xl text-center pb-6 underline">Compétences Générales</h1>
                     <p>Grace à cette formation de développeur WEB, j ai pu acquérir les bases du développement de sites WEB et d applications Web afin de:</p>
                     <br/>
                     <ul>

@@ -4,11 +4,15 @@ import Calendar from "../components/svg/Calendar";
 import HashTag from "../components/svg/HashTag";
 import Location from "../components/svg/Location";
 import Share from "../components/svg/Share";
+import { useWindowSize } from "../utils/helpers"
 
 function Diplomas(props){
+    const size = useWindowSize()
     const diplomas = props.data
     return(
-        <article className="w-3/5 m-auto">
+        <article 
+            className={size.width>800?"w-3/5 m-auto":"w-4/5 m-auto"}
+            >
             <h1 className="p-3 text-xl font-bold text-gray-500 flex justify-center items-center border-y-2 border-y-stone-500">
                 <AcademyCap/>
                 FORMATION
