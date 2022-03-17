@@ -108,7 +108,7 @@ export default function Contact(){
                             </div>
                             <div className="flex flex-col my-5">
                                 <label htmlFor="message" className="py-2">Message : </label>
-                                <textarea  type='text' {...register("message")} name="message" className="appearance-none bg-transparent border h-[100px] border-gray-700 w-full text-gray-700 mr-3 focus:outline-none p-2 resize rounded-md"/>
+                                <textarea  type='text' {...register("message")} name="message" className="appearance-none bg-transparent border h-[100px] border-gray-700 w-full text-gray-700 mr-3 focus:outline-none p-2 resize-y rounded-md"/>
                                 {errors.message&&<span className={errorClassname}>{errors.message.message}</span>}
                             </div>
                             <div className="flex flex-col my-5">

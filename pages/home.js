@@ -12,7 +12,7 @@ export default function Home(props){
         <Title title="Accueil"></Title>
         <section className="p-10 min-h-[90vh]">
             <div className="text-center flex flex-col w-full ">
-                <div className="border-4 my-10 border-red-500 rounded-full w-40 h-40 m-auto" onContextMenu={abort} >
+                <div className="border-4 border-red-500 rounded-full w-40 h-40 m-auto my-10" onContextMenu={abort} >
                     <Image src="/pic.jpg" width="200" height="200" className="rounded-full" alt="profile-pic"/>
                 </div>
                 <div>
