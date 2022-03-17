@@ -17,26 +17,6 @@ export default function MobileHeader(){
     }
     return(
         <nav className="bg-gradient-to-r from-gray-900 via-cyan-800 to-gray-900 flex justify-between items-center px-3">
-            {/* <div className="flex-1 flex items-center justify-center">
-                <div className="flex">
-                    {
-                        links.map((link) => {
-                            return (
-                                <Link href={`/${link.linkname}`} key={link.id}>
-                                    <a
-                                    className={linkIsActive(router.pathname,`/${link.linkname}`)
-                                        ? classNames.activeLink
-                                        : classNames.basicLink }
-                                    >
-                                        {link.content.toUpperCase()}
-                                    </a>
-                                </Link>
-                            )                            
-                        })
-                    }
-                </div>
-            </div> */}
-            
             <div id="menuToggle">
                 <input type="checkbox" />
                 <span></span>

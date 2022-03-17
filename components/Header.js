@@ -11,8 +11,8 @@ export default function Header(){
         {id : "5" , linkname : 'contact' , content : 'Contact'}
     ]
     const classNames = {
-        activeLink :"px-6 py-4 font-medium text-center text-2xl text-cyan-800 bg-white",
-        basicLink : "duration-150 ease-in px-6 py-4 font-medium text-center text-2xl text-white hover:text-cyan-800 hover:bg-white"
+        activeLink :"px-6 py-4 font-medium text-center text-2xl text-cyan-800 bg-white link link-active",
+        basicLink : "duration-150 ease-in px-6 py-4 font-medium text-center text-2xl text-white hover:text-cyan-800 hover:bg-white link"
     }
     function background(link){
         switch(link){
