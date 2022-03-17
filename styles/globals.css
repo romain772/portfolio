@@ -88,3 +88,47 @@
 {
   transform: none;
 }
+.link{
+  position : relative
+}
+.link:after{
+  border-bottom: 2px solid rgb(175, 53, 4);
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+  width: 100%;
+}
+
+.link:hover{
+  line-height: 1.25;
+}
+/* @keyframes letters {
+  lin
+} */
+
+.link:hover:after{
+  transform: scaleX(0.3)
+}
+
+.link-active:after{
+  transform: scaleX(1)
+}
+
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(247, 247, 247); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(14, 14, 78); /* color of the scroll thumb */
+}
+
+.fade{
+  transform : translateX(500px)
+}
