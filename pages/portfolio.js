@@ -24,9 +24,9 @@ export default function Portfolio(props){
                     {portfolio.map((item)=>
                         {                            
                             return(
-                                <Link href={item.link}>
+                                <Link href={item.link} key={item.id} >
                                     <a target="_blank">
-                                        <div key={item.id} className={size.width>800?`w-[400px] h-[400px] m-4 flex flex-col shadow-xl hover:scale-[1.05] duration-150 relative`:
+                                        <div className={size.width>800?`w-[400px] h-[400px] m-4 flex flex-col shadow-xl hover:scale-[1.05] duration-150 relative`:
                                         `w-full min-h-[400px] m-auto mt-6 flex flex-col justify-between shadow-xl hover:scale-[1.05] duration-150 relative`}>
                                             <div className="flex flex-wrap px-2 py-3 absolute">
                                                     {loading?null:item.tags.map((tag)=>{
