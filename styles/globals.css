@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#menu{
+  z-index: 10;
+}
 .error{
     color : red
 }
