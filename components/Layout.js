@@ -19,6 +19,7 @@ export default function Layout({ children }) {
           <meta property="og:description" 
                 content="Mon portfolio." />
           <meta property="og:image" content="/logo.svg"/>
+          <meta property="og:url" content="https://portfoliorb.herokuapp.com" />
         </Head>
         {/* {variable?<Lines/>:null} */}
         {size.width>800?
