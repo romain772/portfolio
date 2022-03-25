@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"
 import { linkIsActive } from "../utils/helpers"
+import Image from "next/image"
 
 export default function Header(){
     const links = [
@@ -16,14 +17,31 @@ export default function Header(){
     }
     function background(link){
         switch(link){
-            case '/home' : return "bg-gradient-to-r from-cyan-800 to-gray-900";
+            case '/home' : return "bg-gradient-to-r from-cyan-600 to-gray-900";
             break
-            case '/contact' : return "bg-gradient-to-r from-gray-900 to-cyan-800";
+            case '/contact' : return "bg-gradient-to-r from-gray-900 to-cyan-600";
             break
         }        
-        return "bg-gradient-to-r from-gray-900 via-cyan-800 to-gray-900"      
+        return "bg-gradient-to-r from-gray-900 via-cyan-600 to-gray-900"      
     }
     const router = useRouter()
+    function clickEvent(e){
+        const route = e.target.innerHTML.toLowerCase()
+        const activeLinkID = document.querySelector('.link-active').value
+        const targetLinkId = e.target.value
+        links.map((link)=>{
+            if(link['content'].toLowerCase() == route && '/'+link['linkname'] != router.pathname){
+                const section = document.querySelector('section')
+                // if(activeLinkID < targetLinkId){
+                //     section.classList.add('translate-right')
+                // }else{section.classList.add('translate-left')}
+                section.classList.add('opacity')
+                setTimeout(() => {
+                    router.push('/'+link['linkname'])
+                }, 500);                
+            }
+        })
+    }
     return(
         <nav className={`${background(router.pathname)}`}>
             <div className="flex-1 flex items-center justify-center">
@@ -31,15 +49,26 @@ export default function Header(){
                     {
                         links.map((link) => {
                             return (
-                                <Link href={`/${link.linkname}`} key={link.id}>
-                                    <a
+                                // <Link href={`/${link.linkname}`} key={link.id}>
+                                //     <a
+                                //     className={linkIsActive(router.pathname,`/${link.linkname}`)
+                                //         ? classNames.activeLink
+                                //         : classNames.basicLink }
+                                //     >
+                                //         {link.content.toUpperCase()}
+                                //     </a>
+                                // </Link>
+                                <button 
+                                    type="button"
+                                    onClick={clickEvent}
+                                    key={link.id}
+                                    value={link.id}
                                     className={linkIsActive(router.pathname,`/${link.linkname}`)
-                                        ? classNames.activeLink
-                                        : classNames.basicLink }
-                                    >
-                                        {link.content.toUpperCase()}
-                                    </a>
-                                </Link>
+                                            ? classNames.activeLink
+                                            : classNames.basicLink }
+                                >
+                                    {link.content.toUpperCase()}
+                                </button>
                             )                            
                         })
                     }
