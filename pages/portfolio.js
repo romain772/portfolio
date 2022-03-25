@@ -15,7 +15,7 @@ export default function Portfolio(props){
     return (
         <>
             <Title title="Portfolio"/>
-            <section className={size.width>800?"py-10 min-h-[90vh] w-[90%] m-auto":"py-10 min-h-[90vh] w-[95%] m-auto"}>
+            <section className={size.width>800?"scale-in py-10 min-h-[90vh] w-[90%] m-auto":"py-10 min-h-[90vh] w-[95%] m-auto"}>
                 <div className="w-full">
                     <h1 className="text-center text-2xl underline">{'Portfolio'}</h1>
                     <div 

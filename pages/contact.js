@@ -74,7 +74,7 @@ export default function Contact(){
         <>
             <ToastContainer/>
             <Title title="Contact"></Title>
-            <section className={size.width>800?"p-10 min-h-[90vh] w-[80%] m-auto":"p-10 min-h-[90vh] w-[95%] m-auto"}>
+            <section className={size.width>800?"scale-in p-10 min-h-[90vh] w-[80%] m-auto":"p-10 min-h-[90vh] w-[95%] m-auto"}>
                 <h1 className="text-2xl text-center pb-6 underline">Contactez moi : </h1>
                 <div 
                     className={size.width>800?"grid grid-cols-2":"flex flex-col"}>

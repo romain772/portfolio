@@ -8,7 +8,7 @@ export default function About(props){
     return (
         <>
         <Title title="A propos..."></Title>
-        <section className="min-h-[90vh] pt-10">
+        <section className="scale-in min-h-[90vh] pt-10">
             <Diplomas data={diplomas}/>
             <Experiences data={experiences}/>
         </section>
