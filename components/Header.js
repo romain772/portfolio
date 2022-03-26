@@ -33,8 +33,8 @@ export default function Header(){
             if(link['content'].toLowerCase() == route && '/'+link['linkname'] != router.pathname){
                 const section = document.querySelector('section')
                 if(activeLinkID < targetLinkId){
-                     section.classList.add('translate-right')
-                }else{section.classList.add('translate-left')}
+                     section.classList.add('translate-left')
+                }else{section.classList.add('translate-right')}
                 //section.classList.add('opacity')
                 setTimeout(() => {
                     router.push('/'+link['linkname'])
