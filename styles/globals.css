@@ -150,7 +150,7 @@ html{
 }
 
 .scale-in{
-  animation: opacity 1.5s;
+  animation: scalein 0.5s;
 }
 
 @keyframes scalein {
