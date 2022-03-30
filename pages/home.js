@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Title from '../components/Title'
 
 export default function Home(props){
-    console.log(props)
     const identity = props.identity
     return (
         <>
@@ -47,9 +46,8 @@ export default function Home(props){
     )
 }
 
-Home.getInitialProps = async ({ctx , req}) => {
+Home.getInitialProps = async (ctx) => {
     const res = await fetch(process.env.ROOT_URL+'/api/identity')
     const json = await res.json()
-    const ip = req.headers["x-real-ip"] || req.connection.remoteAddress;
-    return { identity : json.identity , ip }
+    return { identity : json.identity }
 }
